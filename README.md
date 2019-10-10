@@ -1,5 +1,5 @@
 # cscd311-class-project-web
-Hall Registration Website by Joseph Edusei.
+Hall Registration Website by Joseph Edusei (ID: 10681279).
 
 # Setup
 1.  First, go to https://github.com/jedusei/cscd311-class-project-api and follow the instructions there.
