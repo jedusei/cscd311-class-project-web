@@ -1,8 +1,8 @@
-# cscd311-project-web-10681279
+# cscd311-class-project-web
 Hall Registration Website by Joseph Edusei.
 
 # Setup
-1.  First, go to https://github.com/jedusei/cscd311-project-api-10681279 and follow the instructions there.
+1.  First, go to https://github.com/jedusei/cscd311-class-project-api and follow the instructions there.
 2.  Clone this repository and open "login.html".
 3.  Enter a valid student ID and pin (Options specified below).
 4.  Select the hall and room and click 'Submit'.
