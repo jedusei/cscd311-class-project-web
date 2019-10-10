@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script>
+        // Redirect to register page if already logged in
+        if (sessionStorage.getItem("loggedIn"))
+            window.location = "register.html";
+    </script>
+</head>
+
+<body class="d-flex align-items-center bg-img" style="background-image: url('img/balme_library_2.jpg')">
+    <div class="row w-100 mx-0 py-4" style="background:#ffffffe8; box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.3)">
+        <div class="col text-center my-auto border-right" style="border-color: #00386c3d">
+            <img src="img/University-of-Ghana.png" />
+        </div>
+        <div class="col text-center my-auto">
+            <h2 class="mb-5">Hall Registration Portal</h2>
+            <form class="w-50 mx-auto" onsubmit="login(event)">
+                <div class="input-group my-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text input-icon">
+                            <i class="fa fa-user" style="width: 16px"></i>
+                        </span>
+                    </div>
+                    <input name="studentID" id="studentID" class="form-control" type="text" pattern="[0-9]{8,}"
+                        placeholder="Student ID" oninvalid="setCustomValidity('Invalid ID')"
+                        onchange="setCustomValidity('')" required>
+                </div>
+                <div class="input-group my-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text input-icon">
+                            <i class="fa fa-key"></i>
+                        </span>
+                    </div>
+                    <input name="pin" id="pin" class="form-control" type="password" placeholder="PIN" maxlength="5"
+                        pattern="[0-9]{5}" oninvalid="setCustomValidity('Invalid PIN')" onchange="setCustomValidity('')"
+                        required>
+                </div>
+                <div class="text-center my-4">
+                    <button class="btn btn-primary px-4">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>

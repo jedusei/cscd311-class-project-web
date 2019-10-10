@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <title>Hall Registration</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script>
+        // Redirect to login page if not logged in
+        if (!sessionStorage.getItem("loggedIn"))
+            window.location = "login.html";
+    </script>
+</head>
+
+<body class="d-flex align-items-center bg-img invisible" style="background-image: url('img/balme_library_1.jpg')">
+    <div class="container rounded-panel w-50 p-4" style="background-color: #ffffffde">
+        <div class="row">
+            <div class="col">
+                Name: <b><span id="studentName"></span></b><br>
+                ID: <b><span id="studentID"></span></b><br>
+                Status: <b><span id="status"></span></b>
+            </div>
+            <div class="col text-right my-auto">
+                <button class="btn btn-danger" onclick="logout()">Logout</button>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <form class="w-50 mx-auto pt-3" onsubmit="register(event)">
+                <div class="form-group">
+                    <label for="hall">Hall</label>
+                    <select class="form-control" id="hall" placeholder="Hall" onchange="getRooms()" disabled
+                        required></select>
+                </div>
+                <div class="form-group">
+                    <label for="room">Room</label>
+                    <select class="form-control" id="room" placeholder="Room"
+                        onchange="btnSubmit.removeAttr('disabled')" disabled required></select>
+                </div>
+                <div class="text-center mt-5">
+                    <button id="submit" class="btn btn-primary" disabled>Submit</button>
+                </div>
+            </form>
+        </div>
+        <hr class="mb-3">
+        <div class="row px-3 pt-2">
+            <img src="img/ug-logo-no_text.png" width="30px">
+            <div class="mx-auto"></div>
+            <span class="text-secondary my-auto" style="font-size: 70%">©2019 Joseph Edusei</span>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/register.js"></script>
+</body>
+
+</html>
