@@ -7,7 +7,7 @@ Hall Registration Website by Joseph Edusei
 3.  Enter a valid student ID and pin (Options specified below).
 4.  Select the hall and room and click 'Submit'.
 5.  Open "halls.html" to see a list of the halls, rooms and members.
-6.  You can open "localhost/reset" in your browser to clear all registrations.
+6.  You can open "localhost/reset" in your browser to clear all registrations, but make sure you logout first.
 
 # Valid Student Credentials
 ID:   10681279
